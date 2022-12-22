@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.spotifyclone.di
 
 import android.app.Application

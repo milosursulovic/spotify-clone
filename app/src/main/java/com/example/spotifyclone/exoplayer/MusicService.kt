@@ -17,6 +17,7 @@ import javax.inject.Inject
 
 private const val SERVICE_TAG = "MusicService"
 
+@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class MusicService : MediaBrowserServiceCompat() {
     @Inject
