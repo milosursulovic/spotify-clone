@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.spotifyclone.exoplayer
 
 import android.app.PendingIntent
@@ -17,7 +19,6 @@ import javax.inject.Inject
 
 private const val SERVICE_TAG = "MusicService"
 
-@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class MusicService : MediaBrowserServiceCompat() {
     @Inject
