@@ -1,4 +1,4 @@
-package com.example.spotifyclone
+package com.example.spotifyclone.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
