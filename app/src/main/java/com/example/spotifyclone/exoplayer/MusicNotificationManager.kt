@@ -6,7 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
 import android.support.v4.media.session.MediaControllerCompat
 import android.support.v4.media.session.MediaSessionCompat
-import com.bumptech.glide.RequestManager
+import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
 import com.example.spotifyclone.R
@@ -14,7 +14,6 @@ import com.example.spotifyclone.other.Constants
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.ui.PlayerNotificationManager
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MusicNotificationManager(
@@ -23,9 +22,6 @@ class MusicNotificationManager(
     notificationListener: PlayerNotificationManager.NotificationListener,
     private val newSongCallback: () -> Unit
 ) {
-    @Inject
-    lateinit var glide: RequestManager
-
     private val notificationManager: PlayerNotificationManager
 
     init {
@@ -63,7 +59,7 @@ class MusicNotificationManager(
             player: Player,
             callback: PlayerNotificationManager.BitmapCallback
         ): Bitmap? {
-            glide.asBitmap()
+            Glide.with(context).asBitmap()
                 .load(mediaController.metadata.description.iconUri)
                 .into(object : CustomTarget<Bitmap>() {
                     override fun onResourceReady(
