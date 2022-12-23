@@ -13,9 +13,7 @@ import com.example.spotifyclone.R
 import com.example.spotifyclone.other.Constants
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.ui.PlayerNotificationManager
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
 class MusicNotificationManager(
     private val context: Context,
     sessionToken: MediaSessionCompat.Token,

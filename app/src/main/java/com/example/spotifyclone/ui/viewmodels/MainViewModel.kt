@@ -28,7 +28,6 @@ class MainViewModel @Inject constructor(
     val playbackState = musicServiceConnection.playbackState
 
     init {
-
         _mediaItems.postValue(Resource.Loading())
         musicServiceConnection.subscribe(
             Constants.MEDIA_ROOT_ID,
