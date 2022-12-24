@@ -3,6 +3,7 @@ package com.example.spotifyclone.adapters
 import androidx.recyclerview.widget.AsyncListDiffer
 import com.bumptech.glide.RequestManager
 import com.example.spotifyclone.R
+import com.example.spotifyclone.databinding.ListItemBinding
 import javax.inject.Inject
 
 class SongAdapter @Inject constructor(
@@ -13,7 +14,7 @@ class SongAdapter @Inject constructor(
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
         val song = songs[position]
-        holder.binding.apply {
+        (holder.binding as ListItemBinding).apply {
             tvPrimary.text = song.title
             tvSecondary.text = song.subtitle
             glide.load(song.imageUrl).into(ivItemImage)
