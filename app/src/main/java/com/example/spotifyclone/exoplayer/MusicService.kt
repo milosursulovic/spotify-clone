@@ -4,11 +4,13 @@ package com.example.spotifyclone.exoplayer
 
 import android.app.PendingIntent
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.support.v4.media.MediaBrowserCompat
 import android.support.v4.media.MediaDescriptionCompat
 import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaSessionCompat
+import androidx.annotation.RequiresApi
 import androidx.media.MediaBrowserServiceCompat
 import com.example.spotifyclone.exoplayer.callbacks.MusicPlaybackPreparer
 import com.example.spotifyclone.exoplayer.callbacks.MusicPlayerEventListener
@@ -53,6 +55,7 @@ class MusicService : MediaBrowserServiceCompat() {
             private set
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate() {
         super.onCreate()
 

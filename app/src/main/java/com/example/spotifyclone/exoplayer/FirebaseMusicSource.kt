@@ -63,7 +63,7 @@ class FirebaseMusicSource @Inject constructor(
             .build()
         MediaBrowserCompat.MediaItem(
             desc,
-            android.support.v4.media.MediaBrowserCompat.MediaItem.FLAG_PLAYABLE
+            MediaBrowserCompat.MediaItem.FLAG_PLAYABLE
         )
     }.toMutableList()
 
