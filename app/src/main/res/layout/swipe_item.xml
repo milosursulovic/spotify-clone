@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_primary_swipe"
+        android:id="@+id/tv_primary"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"

@@ -11,7 +11,7 @@ class SwipeSongAdapter : BaseSongAdapter(R.layout.swipe_item) {
         val song = songs[position]
         (holder.binding as SwipeItemBinding).apply {
             val text = "${song.title} - ${song.subtitle}"
-            tvPrimarySwipe.text = text
+            tvPrimary.text = text
         }
     }
 }

@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.support.v4.media.session.PlaybackStateCompat
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.navigation.fragment.NavHostFragment
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.bumptech.glide.RequestManager
 import com.example.spotifyclone.R
@@ -59,6 +61,38 @@ class MainActivity : AppCompatActivity() {
             curPlayingSong?.let {
                 mainViewModel.playOrToggleSong(it, true)
             }
+        }
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        swipeSongAdapter.setItemClickListener {
+            navController.navigate(R.id.global_action_to_song_fragment)
+        }
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.songFragment -> hideBottomBar()
+                R.id.homeFragment -> showBottomBar()
+                else -> showBottomBar()
+            }
+        }
+    }
+
+    private fun hideBottomBar() {
+        binding.run {
+            ivCurSongImage.isVisible = false
+            vpSong.isVisible = false
+            ivPlayPause.isVisible = false
+        }
+    }
+
+    private fun showBottomBar() {
+        binding.run {
+            ivCurSongImage.isVisible = true
+            vpSong.isVisible = true
+            ivPlayPause.isVisible = true
         }
     }
 
