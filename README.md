@@ -3,6 +3,8 @@
 ## Overview
 This Android project is a Spotify clone, aiming to replicate the features and functionality of the popular music streaming platform. It is built using various technologies and libraries to provide a seamless music streaming experience to users.
 
+**Please note:** This app was created based on the tutorial by Philipp Lackner and is primarily intended for educational purposes.
+
 ## Technologies and Libraries Used
 
 ### 1. Android
@@ -59,7 +61,7 @@ Contributions to this project are welcome. Feel free to open issues or submit pu
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
-- The project makes use of various open-source libraries and technologies without which it would not be possible.
+- The project is based on a tutorial by Philipp Lackner and is primarily intended for educational purposes.
 
 ## Contact
 For any questions or inquiries, please contact Milos Ursulovic at milosursulovic2696@gmail.com.
