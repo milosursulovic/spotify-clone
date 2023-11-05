@@ -62,4 +62,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - The project makes use of various open-source libraries and technologies without which it would not be possible.
 
 ## Contact
-For any questions or inquiries, please contact [Your Name] at [Your Email Address].
+For any questions or inquiries, please contact Milos Ursulovic at milosursulovic2696@gmail.com.
